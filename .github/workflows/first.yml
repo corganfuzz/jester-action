@@ -1,0 +1,12 @@
+name: First
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  first:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./
