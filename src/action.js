@@ -13,7 +13,7 @@ async function run() {
 
     octokit.rest.issues.createComment({
         ...context.repo,
-        issue_number,
+        issue_number: pull_request.number,
         body: 'yo your PR better be lit',
     });
 
