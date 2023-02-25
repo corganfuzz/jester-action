@@ -1,5 +1,5 @@
 const core = require('@actions/core');
-const github = require('@actions/github')
+const github = require('@actions/github');
 
 
 async function run() {
@@ -11,7 +11,7 @@ async function run() {
     const { context = {} } = github;
     const { pull_request } = context.payload;
 
-    await octokit.rest.issues.createComment({
+    await octokit.issues.createComment({
         ...context.repo,
         issue_number: pull_request.number,
         body: 'yo your PR better be lit',

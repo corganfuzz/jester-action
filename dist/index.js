@@ -9775,7 +9775,7 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 const core = __nccwpck_require__(2186);
-const github = __nccwpck_require__(5438)
+const github = __nccwpck_require__(5438);
 
 
 async function run() {
@@ -9787,7 +9787,7 @@ async function run() {
     const { context = {} } = github;
     const { pull_request } = context.payload;
 
-    await octokit.rest.issues.createComment({
+    await octokit.issues.createComment({
         ...context.repo,
         issue_number: pull_request.number,
         body: 'yo your PR better be lit',
